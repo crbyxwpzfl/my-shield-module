@@ -21,8 +21,8 @@
 
 include:
   - board: seeeduino_xiao_ble
-    shield: tastatur-l
+    shield: tastatur_l
   - board: seeeduino_xiao_ble
-    shield: tastatur-r
+    shield: tastatur_r
   - board: seeeduino_xiao_ble
     shield: settings_reset
