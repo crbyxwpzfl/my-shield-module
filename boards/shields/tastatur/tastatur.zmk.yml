@@ -1,0 +1,13 @@
+file_format: "1"
+id: tastatur
+name: tastatur
+type: shield
+url: https://github.com/
+requires:
+  - seeeduino_xiao_ble
+exposes:
+features:
+  - keys
+siblings:
+  - tastatur-l
+  - tastatur-r
