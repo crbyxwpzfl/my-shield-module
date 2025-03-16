@@ -1,0 +1,22 @@
+
+
+if SHIELD_TASTATUR_LEFT
+
+# Name must be less than 16 characters long!
+config ZMK_KEYBOARD_NAME
+    default "tastatur"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+
+if SHIELD_TASTATUR_LEFT || SHIELD_TASTATUR_RIGHT
+
+config ZMK_SPLIT
+    default y
+    CONFIG_ZMK_POINTING=y
+    CONFIG_ZMK_POINTING_SMOOTH_SCROLLING=y
+
+endif

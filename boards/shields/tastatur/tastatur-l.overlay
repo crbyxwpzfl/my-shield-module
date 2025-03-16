@@ -1,0 +1,3 @@
+
+
+#include "tastatur.dtsi" // The shared dtsi file is included in the overlay
