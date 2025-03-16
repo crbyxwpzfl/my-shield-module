@@ -1,7 +1,7 @@
 
 
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your dtsi
-#include "my_keyboard-layouts.dtsi" // here is the stuff for zmk studio
+#include "tastatur-layouts.dtsi" // here is the stuff for zmk studio
 
 / {
     kscan0: kscan0 {
