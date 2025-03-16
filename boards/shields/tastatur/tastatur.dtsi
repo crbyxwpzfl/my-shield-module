@@ -4,7 +4,7 @@
 #include "tastatur-layouts.dtsi" // here is the stuff for zmk studio
 
 / {
-    kscan0: kscan0 {
+    kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
         wakeup-source;
@@ -43,7 +43,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6)    RC(3,7)RC(3,8)RC(3,9)
 
 
     chosen {
-        zmk,physical-layout = &physical_layout0;
+        zmk,physical-layout = &physical_layout;
         // Other chosen items
     };
 
