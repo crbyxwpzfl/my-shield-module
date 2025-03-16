@@ -4,12 +4,12 @@
 
 
 / {
-    physical_layout0: physical_layout_0 {
+    physical_layout: physical_layout {
         compatible = "zmk,physical-layout";
         display-name = "Default";
 
-        kscan = <&kscan>;
-        transform = <&matrix_transform>;
+        kscan = <&kscan0>;
+        transform = <&default_transform>;
 
         keys  //         w   h    x    y     rot    rx    ry
 = <&key_physical_attrs 100 100    0    0       0     0     0>
