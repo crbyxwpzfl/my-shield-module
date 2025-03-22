@@ -6,6 +6,12 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+
+CONFIG_ZMK_POINTING=y
+CONFIG_ZMK_POINTING_SMOOTH_SCROLLING=y
+ZMK_STUDIO=y
+
+
 / {
     combos {
         compatible = "zmk,combos";
