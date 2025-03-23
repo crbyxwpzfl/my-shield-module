@@ -6,19 +6,18 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-
 / {
     combos {
         compatible = "zmk,combos";
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <22 23>;
+            key-positions = <36 37>;
         };
 
         del {
             bindings = <&kp BACKSPACE>;
-            key-positions = <9 10>;
+            key-positions = <9 8>;
         };
 
         pair {
@@ -28,12 +27,36 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <14 15>;
+            key-positions = <28 29>;
         };
 
         esc {
             bindings = <&gresc>;
-            key-positions = <1 2>;
+            key-positions = <2 3>;
+        };
+    };
+
+    behaviors {
+        homerowl: homerowl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROWL";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 19 20 21 22 23 24 25 33 34 35 36 37 38 39 47 48 49 50 51 52 53>;
+            flavor = "tap-unless-interrupted";
+        };
+
+        homerowr: homerowr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROWR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-unless-interrupted";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 18 26 27 28 29 30 31 32 40 41 42 43 44 45 46>;
         };
     };
 
@@ -42,26 +65,35 @@
 
         main {
             bindings = <
-&trans        &kp Q         &kp W        &kp E        &kp R         &kp T                       &kp Y   &kp U         &kp I        &kp O        &kp P           &trans
-&trans        &mt LALT A    &mt LCMD S   &mt LCTRL D  &mt LSHIFT F  &kp G   &trans      &trans  &kp H   &mt RSHIFT J  &mt RCTRL K  &mt RCMD L   &mt RALT SLASH  &trans
-&trans        &kp Z         &kp X        &kp C        &kp V         &kp B   &trans      &trans  &kp N   &kp M         &kp COMMA    &kp PERIOD   &kp MINUS       &trans
-&bt BT_SEL 0  &bt BT_SEL 1  &lt 4 SPACE  &lt 3 SPACE  &lt 1 SPACE   &trans  &trans      &trans  &trans  &lt 1 SPACE   &lt 2 SPACE  &lt 4 SPACE  &bt BT_SEL 2    &bt BT_SEL 4
+&trans        &kp Q             &kp W             &kp E              &kp R               &kp T                       &kp Y   &kp U               &kp I              &kp O             &kp P                 &trans
+&trans        &homerowl LALT A  &homerowl LCMD S  &homerowl LCTRL D  &homerowl LSHIFT F  &kp G   &trans      &trans  &kp H   &homerowr RSHIFT J  &homerowr RCTRL K  &homerowr RCMD L  &homerowr RALT SLASH  &trans
+&trans        &kp Z             &kp X             &kp C              &kp V               &kp B   &trans      &trans  &kp N   &kp M               &kp COMMA          &kp PERIOD        &kp MINUS             &trans
+&bt BT_SEL 0  &bt BT_SEL 1      &trans            &lt 3 SPACE        &lt 1 SPACE         &trans  &trans      &trans  &trans  &lt 2 SPACE         &lt 4 SPACE        &trans            &bt BT_SEL 2          &bt BT_SEL 4
             >;
         };
 
-        mouse {
+        syst-r {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans                        &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &mkp MB4  &mkp MB5  &trans      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans    &trans      &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_UP     &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans    &trans      &trans  &trans          &mkp LCLK       &mkp RCLK       &mkp MCLK        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW    &kp RIGHT_ARROW  &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_UP     &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans          &mkp LCLK       &mkp RCLK       &mkp MCLK        &bootloader  &bootloader
+            >;
+        };
+
+        syst-l {
+            bindings = <
+&trans       &trans          &mt K_MUTE C_VOL_DN      &mt K_MUTE C_VOL_UP      &trans    &trans                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &studio_unlock  &mt K_PLAY_PAUSE K_PREV  &mt K_PLAY_PAUSE K_NEXT  &mkp MB4  &mkp MB5  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans          &kp C_BRI_DN             &kp C_BRI_UP             &trans    &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &bootloader     &trans                   &trans                   &trans    &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         syms-r {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &mt F7 N7  &mt F8 N8  &mt F9 N9  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mt F1 N1  &mt F2 N2  &mt F3 N3  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp N0  &mt F1 N1  &mt F2 N2  &mt F3 N3  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mt F4 N4  &mt F5 N5  &mt F6 N6  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans     &trans     &trans     &trans  &trans
             >;
@@ -75,15 +107,5 @@
 &trans  &trans  &trans  &trans         &trans         &trans     &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
-
-        syst {
-            bindings = <
-&trans       &trans          &trans                   &trans                   &trans               &trans                                   &trans        &trans        &trans  &trans  &trans          &trans
-&trans       &studio_unlock  &mt K_PLAY_PAUSE K_PREV  &mt K_PLAY_PAUSE K_NEXT  &mt K_MUTE C_VOL_DN  &mt K_MUTE C_VOL_UP  &trans      &trans  &kp C_BRI_UP  &kp C_BRI_DN  &trans  &trans  &studio_unlock  &trans
-&trans       &trans          &trans                   &trans                   &trans               &trans               &trans      &trans  &trans        &trans        &trans  &trans  &trans          &trans
-&bootloader  &bootloader     &trans                   &trans                   &trans               &trans               &trans      &trans  &trans        &trans        &trans  &trans  &bootloader     &bootloader
-            >;
-        };
     };
 };
-
