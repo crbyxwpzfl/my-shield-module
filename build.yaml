@@ -23,6 +23,7 @@ include:
   - board: seeeduino_xiao_ble
     shield: tastatur-l
     snippet: studio-rpc-usb-uart  #  for zmk studio
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_POINTING=y -DCONFIG_ZMK_POINTING_SMOOTH_SCROLLING=y
   - board: seeeduino_xiao_ble
     shield: tastatur-r
   - board: seeeduino_xiao_ble
