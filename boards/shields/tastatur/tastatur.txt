@@ -1,0 +1,430 @@
+
+for https://keymap-drawer.streamlit.app/
+
+layout: {zmk_keyboard: tastatur}
+layers:
+  main:
+  - {t: ▽, type: trans}
+  - q zs 1!/F1
+  - w pv/pp 2@/F2
+  - e nx/pp 3#/F3
+  - r dim 4$/F4    
+  - t inc 5%/F5
+  - y scrl-l 6^/F6 
+  - u scrl-d 7&/F7
+  - i scrl-u 8*/F8
+  - o scrl-r 9(/F9
+  - p ▽ 0)/F10
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - a/alt-l ▽ ▽
+  - s/cmd-l ▽ ▽
+  - d/ctrl-l ▽ ▽ 
+  - f/shift-l ▽ ▽   
+  - g ▽ ▽
+  - loud/mute ▽ F11/F12
+  - home ▽ F15/16
+  - H arr-l ▽
+  - j/shift-r arr-d ▽
+  - k/ctrl-r arr-u ▽
+  - l/cmd-r arr-r ▽
+  - ;:/alt-r ▽ ▽
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - z globe/cmenu ▽
+  - x pg-u -_
+  - c pg-d =+
+  - v mc-4 [{  
+  - b mc-5 ]}
+  - sile/mute ▽ F13/F14
+  - end ▽ F18/F19
+  - n mv-l `~
+  - m mv-d '"
+  - ', mv-u \|'
+  - .< mv-r ▽
+  - /? ▽ ▽
+  - {t: ▽, type: trans}
+  - bt-0 out ▽
+  - bt-1 boot ▽
+  - {t: ▽, type: trans}
+  - sp ▽ ▽
+  - sp/ly-syst ▽ ▽
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - sp/ly-syms mc-l ▽
+  - sp mc-r ▽
+  - ▽ mc-m ▽
+  - bt-2 boot ▽
+  - bt-4 out ▽
+combos:
+- p: [36, 37]
+  k: enter
+  l: [main]
+- p: [9, 10]
+  k: backsp
+  l: [main]
+- p: [40, 41]
+  k: bt-clr
+  l: [main]
+- p: [28, 29]
+  k: tab
+  l: [main]
+- p: [2, 1]
+  k: 'esc`'
+  l: [main]
+- p: [52, 53]
+  k: bt-clr
+  l: [main]
+
+
+
+
+
+
+
+
+
+lesser keys 
+
+
+layout: {zmk_keyboard: tastatur}
+layers:
+  main:
+  - q zs 1!/F1
+  - w pv/pp 2@/F2
+  - e nx/pp 3#/F3
+  - r dim 4$/F4    
+  - t inc 5%/F5
+  - y scrl-l 6^/F6 
+  - u scrl-d 7&/F7
+  - i scrl-u 8*/F8
+  - o scrl-r 9(/F9
+  - p ▽ 0)/F10
+  - a/alt ▽ ▽
+  - s/cmd ▽ ▽
+  - d/ctrl ▽ ▽ 
+  - f/shift ▽ ▽   
+  - g ▽ ▽
+  - loud/mute ▽ F11/F12
+  - home ▽ F15/16
+  - H arr-l ▽
+  - j/shift arr-d ▽
+  - k/ctrl arr-u ▽
+  - l/cmd arr-r ▽
+  - ;:/alt ▽ ▽
+  - z globe/cmenu ▽
+  - x pg-u -_
+  - c pg-d =+
+  - v mc-4 [{  
+  - b mc-5 ]}
+  - sile/mute ▽ F13/F14
+  - end ▽ F18/F19
+  - n mv-l `~
+  - m mv-d '"
+  - ',< mv-u \|'
+  - .> mv-r ▽
+  - /? ▽ ▽
+  - bt-0 out ▽
+  - bt-1 boot ▽
+  - {t: ▽, type: trans}
+  - sp ▽ ▽
+  - sp/ly-syst ▽ ▽
+  - sp/ly-syms mc-l ▽
+  - sp mc-r ▽
+  - ▽ mc-m ▽
+  - bt-2 boot ▽
+  - bt-4 out ▽
+combos:
+- p: [31, 32]
+  k: enter
+  l: [main]
+- p: [8, 9]
+  k: backsp
+  l: [main]
+- p: [42, 43]
+  k: bt-clr
+  l: [main]
+- p: [23, 24]
+  k: tab
+  l: [main]
+- p: [0, 1]
+  k: 'esc`'
+  l: [main]
+- p: [34, 35]
+  k: bt-clr
+  l: [main]
+
+
+
+  draw_config:
+  key_w: 70.0
+  key_h: 66.0
+  split_gap: 30.0
+  combo_w: 28.0
+  combo_h: 26.0
+  key_rx: 6.0
+  key_ry: 6.0
+  dark_mode: auto
+  n_columns: 1
+  separate_combo_diagrams: false
+  combo_diagrams_scale: 2
+  inner_pad_w: 2.0
+  inner_pad_h: 2.0
+  outer_pad_w: 30.0
+  outer_pad_h: 56.0
+  line_spacing: 1.2
+  arc_radius: 6.0
+  append_colon_to_layer_header: true
+  small_pad: 2.0
+  legend_rel_x: 0.0
+  legend_rel_y: 0.0
+  draw_key_sides: false
+  key_side_pars:
+    rel_x: 0
+    rel_y: 4
+    rel_w: 12
+    rel_h: 12
+    rx: 4
+    ry: 4
+  svg_extra_style: ''
+  footer_text: Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>
+  shrink_wide_legends: 7
+  style_layer_activators: true
+  glyph_tap_size: 14
+  glyph_hold_size: 12
+  glyph_shifted_size: 10
+  glyphs: {}
+parse_config:
+  preprocess: true
+  skip_binding_parsing: false
+  raw_binding_map: {}
+  sticky_label: sticky
+  toggle_label: toggle
+  tap_toggle_label: tap-toggle
+  trans_legend:
+    t: ▽
+    type: trans
+  layer_legend_map: {}
+  mark_alternate_layer_activators: false
+  modifier_fn_map:
+    left_ctrl: Ctl
+    right_ctrl: Ctl
+    left_shift: Sft
+    right_shift: Sft
+    left_alt: Alt
+    right_alt: AltGr
+    left_gui: Gui
+    right_gui: Gui
+    keycode_combiner: '{mods}+{key}'
+    mod_combiner: '{mod_1}+{mod_2}'
+    special_combinations:
+      left_ctrl+left_alt+left_gui+left_shift: Hyper
+      left_ctrl+left_alt+left_shift: Meh
+  qmk_remove_keycode_prefix:
+  - KC_
+  qmk_keycode_map:
+    XXXXXXX: ''
+    'NO': ''
+    MINUS: '-'
+    MINS: '-'
+    EQUAL: '='
+    EQL: '='
+    LEFT_BRACKET: '['
+    LBRC: '['
+    RIGHT_BRACKET: ']'
+    RBRC: ']'
+    BACKSLASH: \
+    BSLS: \
+    NONUS_HASH: '#'
+    NUHS: '#'
+    SEMICOLON: ;
+    SCLN: ;
+    QUOTE: ''''
+    QUOT: ''''
+    GRAVE: '`'
+    GRV: '`'
+    COMMA: ','
+    COMM: ','
+    DOT: .
+    SLASH: /
+    SLSH: /
+    TILDE: '~'
+    TILD: '~'
+    EXCLAIM: '!'
+    EXLM: '!'
+    AT: '@'
+    HASH: '#'
+    DOLLAR: $
+    DLR: $
+    PERCENT: '%'
+    PERC: '%'
+    CIRCUMFLEX: ^
+    CIRC: ^
+    AMPERSAND: '&'
+    AMPR: '&'
+    ASTERISK: '*'
+    ASTR: '*'
+    LEFT_PAREN: (
+    LPRN: (
+    RIGHT_PAREN: )
+    RPRN: )
+    UNDERSCORE: _
+    UNDS: _
+    PLUS: +
+    LEFT_CURLY_BRACE: '{'
+    LCBR: '{'
+    RIGHT_CURLY_BRACE: '}'
+    RCBR: '}'
+    PIPE: '|'
+    COLON: ':'
+    COLN: ':'
+    DOUBLE_QUOTE: '"'
+    DQUO: '"'
+    DQT: '"'
+    LEFT_ANGLE_BRACKET: <
+    LABK: <
+    LT: <
+    RIGHT_ANGLE_BRACKET: '>'
+    RABK: '>'
+    GT: '>'
+    QUESTION: '?'
+    QUES: '?'
+  zmk_remove_keycode_prefix: []
+  zmk_keycode_map:
+    EXCLAMATION: '!'
+    EXCL: '!'
+    AT_SIGN: '@'
+    AT: '@'
+    HASH: '#'
+    POUND: '#'
+    DOLLAR: $
+    DLLR: $
+    PERCENT: '%'
+    PRCNT: '%'
+    CARET: ^
+    AMPERSAND: '&'
+    AMPS: '&'
+    ASTERISK: '*'
+    ASTRK: '*'
+    STAR: '*'
+    LEFT_PARENTHESIS: (
+    LPAR: (
+    RIGHT_PARENTHESIS: )
+    RPAR: )
+    EQUAL: '='
+    PLUS: +
+    MINUS: '-'
+    UNDERSCORE: _
+    UNDER: _
+    SLASH: /
+    FSLH: /
+    QUESTION: '?'
+    QMARK: '?'
+    BACKSLASH: \
+    BSLH: \
+    PIPE: '|'
+    NON_US_BACKSLASH: \
+    PIPE2: '|'
+    NON_US_BSLH: '|'
+    SEMICOLON: ;
+    SEMI: ;
+    COLON: ':'
+    SINGLE_QUOTE: ''''
+    SQT: ''''
+    APOSTROPHE: ''''
+    APOS: ''''
+    DOUBLE_QUOTES: '"'
+    DQT: '"'
+    COMMA: ','
+    LESS_THAN: <
+    LT: <
+    PERIOD: .
+    DOT: .
+    GREATER_THAN: '>'
+    GT: '>'
+    LEFT_BRACKET: '['
+    LBKT: '['
+    LEFT_BRACE: '{'
+    LBRC: '{'
+    RIGHT_BRACKET: ']'
+    RBKT: ']'
+    RIGHT_BRACE: '}'
+    RBRC: '}'
+    GRAVE: '`'
+    TILDE: '~'
+    NON_US_HASH: '#'
+    NUHS: '#'
+    TILDE2: '~'
+  zmk_combos: {}
+  zmk_preamble: '#define KEYMAP_DRAWER'
+  zmk_additional_includes: []
+
+
+
+
+
+
+from https://zmk-physical-layout-converter.streamlit.app/
+for https://keymap-drawer.streamlit.app/
+
+
+#include <physical_layouts.dtsi>
+
+/ {
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default";
+
+        kscan = <&kscan0>;
+        transform = <&matrix_transform0>;
+
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    0    0       0     0     0>
+            , <&key_physical_attrs 100 100  110    0       0     0     0>
+            , <&key_physical_attrs 100 100  220    0       0     0     0>
+            , <&key_physical_attrs 100 100  330    0       0     0     0>
+            , <&key_physical_attrs 100 100  440    0       0     0     0>
+            , <&key_physical_attrs 100 100  970    0       0     0     0>
+            , <&key_physical_attrs 100 100 1080    0       0     0     0>
+            , <&key_physical_attrs 100 100 1190    0       0     0     0>
+            , <&key_physical_attrs 100 100 1300    0       0     0     0>
+            , <&key_physical_attrs 100 100 1410    0       0     0     0>
+            , <&key_physical_attrs 100 100    0  100       0     0     0>
+            , <&key_physical_attrs 100 100  110  100       0     0     0>
+            , <&key_physical_attrs 100 100  220  100       0     0     0>
+            , <&key_physical_attrs 100 100  330  100       0     0     0>
+            , <&key_physical_attrs 100 100  440  100       0     0     0>
+            , <&key_physical_attrs 100 100  550   50       0     0     0>
+            , <&key_physical_attrs 100 100  860   50       0     0     0>
+            , <&key_physical_attrs 100 100  970  100       0     0     0>
+            , <&key_physical_attrs 100 100 1080  100       0     0     0>
+            , <&key_physical_attrs 100 100 1190  100       0     0     0>
+            , <&key_physical_attrs 100 100 1300  100       0     0     0>
+            , <&key_physical_attrs 100 100 1410  100       0     0     0>
+            , <&key_physical_attrs 100 100    0  200       0     0     0>
+            , <&key_physical_attrs 100 100  110  200       0     0     0>
+            , <&key_physical_attrs 100 100  220  200       0     0     0>
+            , <&key_physical_attrs 100 100  330  200       0     0     0>
+            , <&key_physical_attrs 100 100  440  200       0     0     0>
+            , <&key_physical_attrs 100 100  550  150       0     0     0>
+            , <&key_physical_attrs 100 100  860  150       0     0     0>
+            , <&key_physical_attrs 100 100  970  200       0     0     0>
+            , <&key_physical_attrs 100 100 1080  200       0     0     0>
+            , <&key_physical_attrs 100 100 1190  200       0     0     0>
+            , <&key_physical_attrs 100 100 1300  200       0     0     0>
+            , <&key_physical_attrs 100 100 1410  200       0     0     0>
+            , <&key_physical_attrs 100 100  110  300       0     0     0>
+            , <&key_physical_attrs 100 100  220  300       0     0     0>
+            , <&key_physical_attrs 100 100  370  330       0     0     0>
+            , <&key_physical_attrs 100 100  480  330       0     0     0>
+            , <&key_physical_attrs 100 100  590  330       0     0     0>
+            , <&key_physical_attrs 100 100  820  330       0     0     0>
+            , <&key_physical_attrs 100 100  930  330       0     0     0>
+            , <&key_physical_attrs 100 100 1040  330       0     0     0>
+            , <&key_physical_attrs 100 100 1190  300       0     0     0>
+            , <&key_physical_attrs 100 100 1300  300       0     0     0>
+            ;
+    };
+};
