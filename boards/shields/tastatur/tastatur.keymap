@@ -89,10 +89,10 @@
 
         syst {
             bindings = <
-&trans        &studio_unlock     &mt C_PP C_PREV  &mt C_PP C_NEXT  &kp C_BRI_DN  &kp C_BRI_UP                      &msc SCRL_LEFT  &msc MOVE_Y(-10)  &msc MOVE_X(15)  &msc SCRL_RIGHT  &trans       &trans
-&trans        &trans             &trans           &trans           &trans        &trans        &trans      &trans  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp UP_ARROW     &kp RIGHT_ARROW  &trans       &trans
-&trans        &mt GLOBE K_CMENU  &kp PAGE_UP      &kp PAGE_DOWN    &mkp MB4      &mkp MB5      &trans      &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_UP     &mmv MOVE_RIGHT  &trans       &trans
-&out OUT_TOG  &bootloader        &trans           &trans           &trans        &trans        &trans      &trans  &trans          &mkp LCLK         &mkp RCLK        &mkp MCLK        &bootloader  &out OUT_TOG
+&trans        &studio_unlock     &mt C_PP C_PREV  &mt C_PP C_NEXT  &kp C_BRI_DN  &kp C_BRI_UP                      &msc MOVE_X(-20)  &msc MOVE_Y(-20)  &msc MOVE_Y(20)  &msc MOVE_X(20)  &trans       &trans
+&trans        &trans             &trans           &trans           &trans        &trans        &trans      &trans  &kp LEFT_ARROW    &kp DOWN_ARROW    &kp UP_ARROW     &kp RIGHT_ARROW  &trans       &trans
+&trans        &mt GLOBE K_CMENU  &kp PAGE_UP      &kp PAGE_DOWN    &mkp MB4      &mkp MB5      &trans      &trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_UP     &mmv MOVE_RIGHT  &trans       &trans
+&out OUT_TOG  &bootloader        &trans           &trans           &trans        &trans        &trans      &trans  &trans            &mkp LCLK         &mkp RCLK        &mkp MCLK        &bootloader  &out OUT_TOG
             >;
         };
 
