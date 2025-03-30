@@ -10,7 +10,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -23,7 +22,7 @@
         del {
             bindings = <&kp BACKSPACE>;
             key-positions = <9 10>;
-k`        };
+        };
 
         btpair-l {
             bindings = <&bt BT_CLR_ALL>;
@@ -84,7 +83,7 @@ k`        };
 
         syst {
             bindings = <
-&trans        &studio_unlock     &mt C_PP C_PREV  &mt C_PP C_NEXT  &kp C_BRI_DN  &kp C_BRI_UP                      &msc MOVE_X(-70)  &msc MOVE_Y(-70)  &msc MOVE_Y(70)  &msc MOVE_X(70)  &trans       &trans
+&trans        &studio_unlock     &mt C_PP C_PREV  &mt C_PP C_NEXT  &kp C_BRI_DN  &kp C_BRI_UP                      &msc MOVE_X(-70)   &msc MOVE_Y(-70)   &msc MOVE_Y(70)   &msc MOVE_X(70)   &trans       &trans
 &trans        &trans             &trans           &trans           &trans        &trans        &trans      &trans  &kp LEFT_ARROW     &kp DOWN_ARROW     &kp UP_ARROW      &kp RIGHT_ARROW   &trans       &trans
 &trans        &mt GLOBE K_CMENU  &kp PAGE_UP      &kp PAGE_DOWN    &mkp MB4      &mkp MB5      &trans      &trans  &mmv MOVE_LEFT     &mmv MOVE_DOWN     &mmv MOVE_UP      &mmv MOVE_RIGHT   &trans       &trans
 &out OUT_TOG  &bootloader        &trans           &trans           &trans        &trans        &trans      &trans  &trans             &mkp LCLK          &mkp RCLK         &mkp MCLK         &bootloader  &out OUT_TOG
